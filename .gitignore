@@ -20,3 +20,4 @@ tests/prettier_*
 # pre-commit
 .pre-commit-config.yaml
 
+*.lock
