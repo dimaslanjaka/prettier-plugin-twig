@@ -32,7 +32,7 @@ In your editor, if the plugin is not automatically picked up and invoked (e.g., 
 {
     "printWidth": 80,
     "tabWidth": 4,
-    "plugins": ["prettier-plugin-embed"]
+    "plugins": ["prettier-plugin-twig"]
 }
 ```
 
