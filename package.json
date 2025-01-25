@@ -12,13 +12,14 @@
     "exports": {
         ".": {
             "import": "./src/index.js",
-            "require": "./src/index.cjs"
+            "require": "./dist/index.cjs"
         }
     },
     "files": [
         "src"
     ],
     "scripts": {
+        "build": "rollup -c",
         "lint": "DEBUG=eslint:cli-engine eslint .",
         "test": "vitest --run",
         "test-smoke": "prettier --check --parser=twig --plugin=./src/index.js tests/smoke-test.twig"
@@ -26,18 +27,24 @@
     "dependencies": {
         "@babel/template": "^7.24.7",
         "@babel/types": "^7.24.9",
+        "glob": "^11.0.1",
         "he": "^1.2.0",
         "lodash": "^4.17.21",
         "prettier": "^3.0.0",
         "resolve": "^1.12.0"
     },
     "devDependencies": {
+        "@rollup/plugin-commonjs": "^28.0.2",
+        "@rollup/plugin-json": "^6.1.0",
+        "@rollup/plugin-node-resolve": "^16.0.0",
         "eslint": "^8.56.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-import": "^2.29.1",
         "eslint-plugin-jest": "^27.9.0",
         "eslint-plugin-prettier": "^5.0.0",
         "eslint-plugin-prettier-doc": "^1.1.0",
+        "jsonc": "^2.0.0",
+        "rollup": "^4.32.0",
         "vitest": "^1.5.0"
     },
     "engines": {
