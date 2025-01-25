@@ -16,7 +16,8 @@
         }
     },
     "files": [
-        "src"
+        "src",
+        "dist"
     ],
     "scripts": {
         "build": "rollup -c",
