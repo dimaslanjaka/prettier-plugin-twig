@@ -60,7 +60,7 @@ export default {
         sourcemap: false, // Optionally, include a source map
         preserveModules: true, // This will preserve the folder structure
         entryFileNames: chunk => {
-            return path.relative("src", chunk.facadeModuleId); // Keep the file structure intact in the output
+            return path.relative("src", chunk.facadeModuleId).replace(/\.js$/, ".cjs"); // Change .js to .cjs
         }
     },
     plugins: [
