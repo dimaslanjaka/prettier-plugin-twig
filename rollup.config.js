@@ -28,7 +28,15 @@ export const external = Object.keys(pkg.dependencies)
         "acorn",
         "angular",
         "babel",
-        "postcss"
+        "postcss",
+        // Explicitly add lodash modules that are unresolved
+        "lodash/isBoolean.js",
+        "lodash/trimEnd.js",
+        "lodash/trimStart.js",
+        "lodash/isFunction.js",
+        "lodash/filter.js",
+        "lodash/repeat.js",
+        "lodash/padStart.js"
     )
     // include these packages
     .filter(
@@ -36,8 +44,6 @@ export const external = Object.keys(pkg.dependencies)
     )
     // Remove duplicates
     .filter((value, index, array) => array.indexOf(value) === index);
-
-console.log(external);
 
 const outDir = path.join(__dirname, "dist");
 // Clean the dist directory if it exists
@@ -53,7 +59,7 @@ export default {
         format: "cjs", // CommonJS output format
         sourcemap: false, // Optionally, include a source map
         preserveModules: true, // This will preserve the folder structure
-        entryFileNames: (chunk) => {
+        entryFileNames: chunk => {
             return path.relative("src", chunk.facadeModuleId); // Keep the file structure intact in the output
         }
     },
