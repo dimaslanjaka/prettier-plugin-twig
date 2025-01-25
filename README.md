@@ -19,7 +19,7 @@ This Plugin enables Prettier to format `.twig` files, as well as `.html.twig`.
 ## Install
 
 ```bash
-yarn add --dev @zackad/prettier-plugin-twig
+yarn add --dev prettier-plugin-twig@https://github.com/dimaslanjaka/prettier-plugin-twig/archive/refs/heads/master.tar.gz#commit=ae3566a5415b0e5819a7929f48220d92fb297e3b
 ```
 
 ## Use
