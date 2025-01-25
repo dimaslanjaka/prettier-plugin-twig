@@ -2,6 +2,8 @@
 
 Forked from [trivago/prettier-plugin-twig-melody](https://github.com/trivago/prettier-plugin-twig-melody) with focus on twig template only.
 
+- Support for [VSCode Prettier Plugin](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
 ![Prettier Twig Banner](./logo/wide-dark.svg#gh-dark-mode-only)
 ![Prettier Twig Banner](./logo/wide-light.svg#gh-light-mode-only)
 
