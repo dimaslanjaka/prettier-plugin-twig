@@ -21,11 +21,11 @@
         "rollup.config.js"
     ],
     "scripts": {
-        "build": "rollup -c",
+        "build": "npx rollup -c",
         "lint": "DEBUG=eslint:cli-engine eslint .",
         "test": "vitest --run",
         "test-smoke": "prettier --check --parser=twig --plugin=./src/index.js tests/smoke-test.twig",
-        "postinstall": "rollup -c"
+        "postinstall": "npx rollup -c"
     },
     "dependencies": {
         "@babel/template": "^7.24.7",
